@@ -1,0 +1,160 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    background: #0c0d10;
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.calculator {
+    width: 100%;
+    max-width: 390px;
+    padding: 25px;
+    background: #17181e;
+    border: 1px solid #292a31;
+    border-radius: 22px;
+    box-shadow: 0 25px 70px rgba(0,0,0,0.5);
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.brand {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.brand span {
+    color: #d4a96a;
+}
+
+.status {
+    color: #777983;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.display {
+    min-height: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 15px 5px 25px;
+    overflow: hidden;
+}
+
+.history {
+    min-height: 25px;
+    color: #858690;
+    font-size: 16px;
+}
+
+.result {
+    width: 100%;
+    text-align: right;
+    font-size: clamp(35px, 10vw, 48px);
+    font-weight: 600;
+    overflow-wrap: anywhere;
+    color: #fff;
+}
+
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.key {
+    height: 65px;
+    border: none;
+    border-radius: 13px;
+    background: #24252d;
+    color: #fff;
+    font-size: 21px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.key:hover {
+    background: #343640;
+    transform: translateY(-2px);
+}
+
+.key:active {
+    transform: scale(0.94);
+}
+
+.utility {
+    background: #30313a;
+    color: #d4a96a;
+    font-size: 17px;
+}
+
+.operator {
+    background: #302a24;
+    color: #d4a96a;
+    font-size: 24px;
+}
+
+.operator:hover {
+    background: #44372a;
+}
+
+.equals {
+    background: #d4a96a;
+    color: #17181e;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.equals:hover {
+    background: #e5bc83;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 25px;
+    color: #686a73;
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 420px) {
+    .calculator {
+        padding: 18px;
+    }
+
+    .keys {
+        gap: 9px;
+    }
+
+    .key {
+        height: 60px;
+    }
+
+    .status {
+        font-size: 8px;
+    }
+}
